@@ -20,6 +20,13 @@ class _SplashScreenState extends State<SplashScreen>
         ..repeat();
 
   @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    _controller.dispose();
+  }
+
+  @override
   void initState() {
     // TODO: implement initState
     super.initState();
@@ -43,11 +50,11 @@ class _SplashScreenState extends State<SplashScreen>
             AnimatedBuilder(
                 animation: _controller,
                 child: Container(
-                  height: 200,
-                  width: 200,
+                  height: MediaQuery.sizeOf(context).height * 0.5,
+                  width: MediaQuery.sizeOf(context).width * 0.5,
                   child: const Center(
                     child: Image(
-                      image: AssetImage('Images/virus.png'),
+                      image: AssetImage('images/virus.png'),
                     ),
                   ),
                 ),
@@ -58,13 +65,14 @@ class _SplashScreenState extends State<SplashScreen>
                   );
                 }),
             SizedBox(
-              height: MediaQuery.sizeOf(context).height * 0.8,
+              height: MediaQuery.sizeOf(context).height * 0.05,
             ),
             const Align(
               alignment: Alignment.center,
               child: Text(
                 'Covid-19\nTracker App',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                textAlign: TextAlign.center,
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25,),
               ),
             )
           ],

@@ -104,6 +104,10 @@ class _WorldStateScreenState extends State<WorldStateScreen>
                           child: Card(
                             child: Column(
                               children: [
+                                SizedBox(
+                                  height:
+                                      MediaQuery.sizeOf(context).height * .01,
+                                ),
                                 ReuseableRow(
                                   title: "Total Cases: ",
                                   value: snapshot.data!.cases.toString(),
@@ -127,7 +131,6 @@ class _WorldStateScreenState extends State<WorldStateScreen>
                                   value: snapshot.data!.deaths.toString(),
                                 ),
                                 const Divider(
-                                  color: Colors.red,
                                   indent: 10,
                                   endIndent: 10,
                                   thickness: 2,
@@ -146,7 +149,6 @@ class _WorldStateScreenState extends State<WorldStateScreen>
                                   value: snapshot.data!.critical.toString(),
                                 ),
                                 const Divider(
-                                  color: Colors.red,
                                   indent: 10,
                                   endIndent: 10,
                                   thickness: 2,
@@ -221,8 +223,8 @@ class ReuseableRow extends StatelessWidget {
         children: [
           Row(
             children: [
-              Text(title),
-              Text(value),
+              Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+              Text(value, style: const TextStyle( fontSize: 18, color: Colors.white)),
             ],
           ),
           SizedBox(

@@ -50,7 +50,6 @@ class _CountriesListScreenState extends State<CountriesListScreen> {
                   if (!snapshot.hasData) {
                     return ListView.builder(
                         itemCount: 10,
-
                         itemBuilder: (context, index) {
                           return Shimmer.fromColors(
                             baseColor: Colors.grey.shade700,

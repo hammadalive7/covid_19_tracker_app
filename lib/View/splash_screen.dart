@@ -13,8 +13,8 @@ class SplashScreen extends StatefulWidget {
   _SplashScreenState createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen>
-    with TickerProviderStateMixin {
+class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMixin {
+
   late final AnimationController _controller =
       AnimationController(duration: const Duration(seconds: 3), vsync: this)
         ..repeat();
@@ -72,7 +72,10 @@ class _SplashScreenState extends State<SplashScreen>
               child: Text(
                 'Covid-19\nTracker App',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25,),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25,
+                ),
               ),
             )
           ],

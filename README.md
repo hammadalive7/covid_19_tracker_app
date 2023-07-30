@@ -1,6 +1,6 @@
 # covid_19_tracker_app
 
-A new Flutter project.
+![covidapp](https://github.com/hammadalive7/covid_19_tracker_app/assets/105983814/cb8a685e-e8e0-4f4a-b07e-b4c64f53801d)
 
 ## Getting Started
 
